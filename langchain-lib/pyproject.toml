@@ -9,4 +9,7 @@ dependencies = [
     "langchain>=0.3.19",
     "python-dotenv>=1.0.1",
     "langchain-google-genai>=2.0.11",
+    "langchain-community>=0.3.18",
+    "chromadb>=0.6.3",
+    "bs4>=0.0.2",
 ]
