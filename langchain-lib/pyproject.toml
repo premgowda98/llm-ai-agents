@@ -12,4 +12,5 @@ dependencies = [
     "langchain-community>=0.3.18",
     "chromadb>=0.6.3",
     "bs4>=0.0.2",
+    "wikipedia>=1.4.0",
 ]
