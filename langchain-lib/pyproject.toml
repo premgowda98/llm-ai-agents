@@ -1,0 +1,11 @@
+[project]
+name = "langchain-lib"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-openai>=0.3.7",
+    "langchain>=0.3.19",
+    "python-dotenv>=1.0.1",
+]
