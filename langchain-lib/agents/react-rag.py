@@ -29,7 +29,7 @@ retriver = db.as_retriever(
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
-contextualise_system_prompt = (
+contextualized_system_prompt = (
     "Given a chat history and the latest user question which might reference context in chat history"
     "formulate a standalone question which can be understood without chat history"
     "DO NOT answer the question, just reformulate it if needed and otherwise return it as is"
@@ -37,7 +37,7 @@ contextualise_system_prompt = (
 
 context_prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", contextualise_system_prompt),
+        ("system", contextualized_system_prompt),
         MessagesPlaceholder("chat_history"),
         ("human", "{input}")
     ]
