@@ -2,18 +2,19 @@ from dotenv import load_dotenv
 from langchain import hub
 from langchain.agents import AgentExecutor, create_react_agent
 from langchain.memory import ConversationBufferMemory
-from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.messages import SystemMessage
 from langchain.tools import Tool
 from langchain import chains
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 import datetime
-from langchain.chains import create_history_aware_retriever, create_retrieval_chain
+from langchain.chains import create_retrieval_chain
 from wikipedia import summary
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains.combine_documents import create_stuff_documents_chain
 import os
+
 load_dotenv()
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
